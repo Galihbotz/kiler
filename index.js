@@ -5112,7 +5112,8 @@ Source : ${anu.result.source}
             })
             .on("end", function () {
               console.log("Finish");
-              itsmevall.sendMessage(from, fs.readFileSync(ran), MessageType.sticker, {contextInfo: { forwardingScore: 508, isForwarded: true, externalAdReply:{title: "𝐺𝑎𝑙𝑖𝒉 ᝣ 𝐵𝑜𝑡𝑧ᔾ...",body:"",previewType:"PHOTO",thumbnail:fs.readFileSync('./stik/fake.jpeg'),sourceUrl:""}}}),
+              itsmevall.sendMessage(from, fs.readFileSync(ran), sticker, {
+                quoted: mek,
               });
               fs.unlinkSync(media);
               fs.unlinkSync(ran);
